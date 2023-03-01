@@ -32,9 +32,7 @@ form.addEventListener('submit', (e) => {
      e.preventDefault();
      checkInput();
      if (checkInput) {
-       setTimeout(() => {
         modal.style.display = "flex";
-       }, 1000);
      }
 });
 
