@@ -6,6 +6,7 @@ const password2 = document.getElementById('password2');
 const togglePassword = document.querySelector('.togglePassword');
 const open = document.querySelector('.open-eye');
 const close = document.querySelector('.close-eye');
+const modal = document.querySelector('.modal');
 
 togglePassword.addEventListener('click', function(){
     const type = password.getAttribute("type") === "password" ? "text" : "password";
@@ -22,13 +23,19 @@ togglePassword.addEventListener('click', function(){
     close.classList.remove("show");
    }
 });
-function validatePassword(password) { 
-    return /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/.test(password);
+const validatePassword = (password) => { 
+    const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,32}$/;
+    return regex.test(password);
   }
 
 form.addEventListener('submit', (e) => {
      e.preventDefault();
      checkInput();
+     if (checkInput) {
+       setTimeout(() => {
+        modal.style.display = "flex";
+       }, 1000);
+     }
 });
 
 const setError = (input, message) => {
@@ -86,8 +93,8 @@ const checkInput = () => {
     if (passwordValue === '') {
         setError(password, 'Please enter your password');
     } 
-    else if (!validatePassword(passwordValue)) {
-        setError(password, 'password must contain at least 1 lowercase alphabetical character,1 uppercase alphabetical character,1 numeric character,1 special character and must be eight characters or longer')
+    else if (passwordValue.match(validatePassword)) {
+        setError(password, 'must contain at least 1 lowercase alphabetical character,1 uppercase alphabetical character,1 numeric character,1 special character and must be eight characters or longer')
     }
     else {
         setSuccess(password);
@@ -99,7 +106,7 @@ const checkInput = () => {
     if (passwordVal2 === '') {
         setError(password2, 'Please enter your password');
     } 
-    else if (passwordValue !== passwordVal2) {
+    else if (passwordVal2 !== passwordValue) {
         setError(password2, 'Password is not equal');
     }
     else {
