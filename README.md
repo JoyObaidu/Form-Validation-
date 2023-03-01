@@ -18,11 +18,12 @@
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot_20230301-130028.png](https://user-images.githubusercontent.com/106669781/222134962-2872037e-be0b-498a-8533-f4818c882a70.png)
+
 
 
 ### Links
-
+-https://github.com/JoyObaidu/Form-Validation-
 - Live Site URL: https://joyobaidu.github.io/Form-Validation-/
 
 ### Built with
