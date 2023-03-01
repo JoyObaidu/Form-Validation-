@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: url("./workshop.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 350px;
+    position: absolute;
+    height: 500px;
+    background: transparent;
+    box-shadow: 0px 2px 5px 1px #000;
+    padding: 30px 20px;
+    display: block;
+    font-weight: 900;
+    font-size: 1rem;
+    background-color: hsla(60, 56%, 91%, 0.559);
+}
+label{
+    display: block;
+}
+h2{
+    padding-bottom: 10px;
+    text-align: center;
+}
+.form-control{
+    padding: 10px;
+}
+
+.form-control input{
+   outline: none;
+   width: 100%;
+   height: 2rem;
+   background: transparent;
+   border-style: none;
+   border-bottom: 1px solid #000;
+   color: hwb(0 3% 96%);
+   font-weight: 500;
+   font-size: .8rem;
+}
+.form-control small{
+    font-weight: 400;
+}
+.eye{
+    position: relative;
+    top: -1.125rem;
+    float: right;
+    cursor: pointer;
+}
+.togglePassword{
+    position: relative;
+    top: -1.5rem;
+    float: right;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+input::placeholder{
+    font-size: .8rem;
+    color: #393939ea;
+    font-weight: 100;
+}
+.form-control.error small{
+    color: hsl(348, 83%, 47%);
+    font-weight: 500;
+    font-size: .7rem;
+}
+
+.form-control.success input{
+    border-bottom: 1px solid rgb(13, 250, 13);
+}
+form .btn{
+    border-style: none;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+form .btn:hover{
+    background-color: beige;
+    transition: 1s ease-out;
+    border: none;
+}

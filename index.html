@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form validation</title>
+</head>
+<body>
+   <div class="container">
+    <form action="#">
+        <h2>Fill in the form below</h2>
+        <div class="form-control">
+            <label for="Uname">Username</label>
+            <input type="text" name="Uname" id="username" placeholder="e.g Jayohwhy Code">
+            <small></small>
+        </div>
+
+        <div class="form-control">
+            <label for="email">Email address</label>
+            <input type="email" name="email" id="email" placeholder="e.g triumphantjoy@gmail.com">
+            <small></small>
+        </div>
+
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="*********">
+            <span class="togglePassword">
+                <ion-icon name="eye" class="open-eye hide" aria-hidden="true"></ion-icon>
+                <ion-icon name="eye-off" class="close-eye"></ion-icon>
+            </span>
+            <small></small>
+        </div>
+
+        <div class="form-control">
+            <label for="password2">Confirm password</label>
+            <input type="password" name="password2" id="password2" placeholder="*********">
+            <small></small>
+        </div>
+
+       <button type="submit" class="btn">Submit</button>
+    </form>
+
+   </div>
+
+    <script src="script.js"></script>
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
