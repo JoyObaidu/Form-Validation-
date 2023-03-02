@@ -31,12 +31,11 @@ const validatePassword = (password) => {
 form.addEventListener('submit', (e) => {
      e.preventDefault();
      checkInput();
-     if (checkInput) {
-       setTimeout(() => {
-        modal.style.display = "flex";
-       }, 1000);
+     if (checkInput()) {
+        modal.style.display = "none";
      }
 });
+
 
 const setError = (input, message) => {
     const formControl = input.parentElement;
@@ -93,7 +92,7 @@ const checkInput = () => {
     if (passwordValue === '') {
         setError(password, 'Please enter your password');
     } 
-    else if (passwordValue.match(validatePassword)) {
+    else if (!passwordValue.match(validatePassword)) {
         setError(password, 'must contain at least 1 lowercase alphabetical character,1 uppercase alphabetical character,1 numeric character,1 special character and must be eight characters or longer')
     }
     else {

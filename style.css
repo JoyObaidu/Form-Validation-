@@ -27,6 +27,8 @@ form{
     font-weight: 900;
     font-size: 1rem;
     background-color: hsla(60, 56%, 91%, 0.559);
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 label{
     display: block;
