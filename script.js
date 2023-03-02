@@ -31,14 +31,9 @@ const validatePassword = (password) => {
 form.addEventListener('submit', (e) => {
      e.preventDefault();
      checkInput();
-<<<<<<< HEAD
-     if (checkInput()) {
-        modal.style.display = "none";
-=======
-     if (checkInput) {
-        modal.style.display = "flex";
->>>>>>> 15d34e76cbdce9252715315bb43b73bd96b2dc80
-     }
+   if (checkInput()) {
+    modal.style.display = "flex";
+   }
 });
 
 
